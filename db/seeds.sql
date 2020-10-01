@@ -1,12 +1,16 @@
 INSERT INTO burgers
     (burger_name, devoured)
 VALUES
-    ('', false);
+    ('Big Double w/ Cheese', false);
 INSERT INTO burgers
     (burger_name, devoured)
 VALUES
-    ('', false);
+    ('Big Mac', false);
 INSERT INTO burgers
     (burger_name, devoured)
 VALUES
-    ('', false);
+    ('Monster Burger w/ Everything', false);
+INSERT INTO burgers
+    (burger_name, devoured)
+VALUES
+    ('Classic Burger', false);
