@@ -2,7 +2,7 @@ const connection = require("../config/connection.js");
 
 const orm = {
     selectAll: function (cb) {
-        var queryString = "SELECT * FROM " + tableInput + ";";
+        var queryString = "SELECT * FROM " + burgers;
         connection.query(queryString, function (err, result) {
             if (err) {
                 throw err;
@@ -11,58 +11,26 @@ const orm = {
         });
     },
 
-    create: function (table, cols, vals, cb) {
-        var queryString = "INSERT INTO " + table;
-
-        queryString += " (";
-        queryString += cols.toString();
-        queryString += ") ";
-        queryString += "VALUES (";
-        queryString += printQuestionMarks(vals.length);
-        queryString += ") ";
-
-        console.log(queryString);
-
-        connection.query(queryString, vals, function (err, result) {
+    create: function (burgerId, cb) {
+        var queryString = "INSERT INTO burgers (burger_name) VALUES (?)";
+        connection.query(queryString, [burgerId], function (err, result) {
             if (err) {
                 throw err;
             }
-
             cb(result);
         });
     },
-    // An example of objColVals would be {name: panther, sleepy: true}
-    update: function (table, objColVals, condition, cb) {
-        var queryString = "UPDATE " + table;
 
-        queryString += " SET ";
-        queryString += objToSql(objColVals);
-        queryString += " WHERE ";
-        queryString += condition;
-
-        console.log(queryString);
-        connection.query(queryString, function (err, result) {
+    update: function (devouredId, cb) {
+        var queryString = "UPDATE burgers SET devoured = TRUE WHERE id = ?";
+        connection.query(queryString, [devouredId], function (err, result) {
             if (err) {
                 throw err;
             }
-
-            cb(result);
-        });
-    },
-    delete: function (table, condition, cb) {
-        var queryString = "DELETE FROM " + table;
-        queryString += " WHERE ";
-        queryString += condition;
-
-        connection.query(queryString, function (err, result) {
-            if (err) {
-                throw err;
-            }
-
             cb(result);
         });
     }
 };
 
-// Export the orm object for the model (cat.js).
+// Export the orm object for the model (burgers.js).
 module.exports = orm;
