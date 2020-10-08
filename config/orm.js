@@ -11,7 +11,7 @@ const orm = {
         });
     },
 
-    create: function (burgerId, cb) {
+    insertB: function (burgerId, cb) {
         var queryString = "INSERT INTO burgers (burger_name) VALUES (?)";
         connection.query(queryString, [burgerId], function (err, result) {
             if (err) {
@@ -21,7 +21,7 @@ const orm = {
         });
     },
 
-    update: function (devouredId, cb) {
+    updateB: function (devouredId, cb) {
         var queryString = "UPDATE burgers SET devoured = TRUE WHERE id = ?";
         connection.query(queryString, [devouredId], function (err, result) {
             if (err) {
