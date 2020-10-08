@@ -10,3 +10,7 @@ h1 {
     text-align: center;
     align-items: center;
 }
+
+.container {
+    background-color: coral;
+}

@@ -3,12 +3,12 @@ $(function () {
     $(".eat-burger").on("click", function (event) {
 
         var id = $(this).data("id");
-        var devour = { id: id };
+        var devoured = { id: id };
 
         // Send the PUT request.
         $.ajax("/api/burger/" + id, {
             type: "PUT",
-            data: devour
+            data: devoured
         }).then(
             function () {
                 console.log("Devoured");
@@ -21,7 +21,7 @@ $(function () {
     $("#submit_btn").on("click", function (event) {
         // Make sure to preventDefault on a submit event.
         event.preventDefault();
-        if ($("").val().trim().length < 1) {
+        if ($("#burgerName").val().trim().length < 1) {
             alert("Your burger needs a name");
         }
         else {
