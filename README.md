@@ -15,12 +15,12 @@
 # **Description**
 * The Burger App has an input section where the user can write-in any burger that they desire and submit it onto the web appplication. After the user submits their burger, it is stored in a database and appears on the page. The user then has the option to eat the burger if they would like to and it would apre on the Devoured column on the page. 
 
-* Screenshot:
+* Screenshot of Deployed Application:
 
-![](images/)
+![](public/assets/img/burgerAni.png)
 
 # **Links**
-* Deployed Heroku: 
+* Deployed Heroku: https://floating-depths-34848.herokuapp.com/
 * Github Overview: https://github.com/iariyami/burger-app
 
 # **Purpose**
