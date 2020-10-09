@@ -17,7 +17,7 @@
 
 * Screenshot of Deployed Application:
 
-![](public/assets/img/burgerAni.png)
+![](public/assets/img/burgerWeb.png)
 
 # **Links**
 * Deployed Heroku: https://floating-depths-34848.herokuapp.com/
