@@ -1,7 +1,7 @@
 {
   "name": "burger-app",
   "version": "1.0.0",
-  "description": "Burger",
+  "description": "Burger App",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -13,7 +13,7 @@
   },
   "keywords": [],
   "author": "Ibrahim Riyami",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/iariyami/burger-app/issues"
   },
