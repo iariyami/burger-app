@@ -14,3 +14,19 @@ h1 {
 .container {
     background-color: coral;
 }
+
+/* #submit_btn {
+    width: 20%;
+    border: black;
+    padding: 14px 28px;
+    font-size: 16px;
+    text-align: center;
+} */
+
+#burgerName {
+    width: 300px;
+}
+
+.newburger {
+    text-align: center;
+}
